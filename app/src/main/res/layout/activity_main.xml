@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    LinearLayout to kontener układający dzieci jedno pod drugim (orientation="vertical")
+    lub obok siebie (orientation="horizontal").
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- TextView - widget do wyświetlania tekstu. Tu jako nagłówek. -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,6 +18,11 @@
         android:textStyle="bold"
         android:layout_marginBottom="24dp"/>
 
+    <!--
+        Button - klikalny przycisk
+        android:id="@+id/btnAddMatrix" tworzy ID do referencji w Javie (R.id.btnAddMatrix)
+        Znak "+" oznacza "stwórz nowe ID", bez "+" oznacza odwołanie do istniejącego
+    -->
     <Button
         android:id="@+id/btnAddMatrix"
         android:layout_width="match_parent"
@@ -20,6 +30,7 @@
         android:text="Dodaj macierz"
         android:layout_marginBottom="8dp"/>
 
+    <!-- TextView na listę macierzy - aktualizowane z kodu przez setText() -->
     <TextView
         android:id="@+id/txtMatrixList"
         android:layout_width="match_parent"
